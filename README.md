@@ -1,8 +1,8 @@
-**AWS Certified Solutions Architect Associate 2025 - Tasks and Projects**
+# AWS Certified Solutions Architect Associate 2025 - Tasks and Projects
 
 This repository documents my journey toward achieving the AWS Certified Solutions Architect Associate 2025 certification.
 
-# Journey start date:  06-Jan-2025
+Journey start date:  06-Jan-2025
 
 Contents:
 - Hands-on AWS tasks and exercises
