@@ -5,7 +5,7 @@ In this hands-on project, I set up an S3 Static Website using AWS S3. The goal w
 1. Created an S3 Bucket and Enabled public access for website access.
 2. Generated S3 Bucket Policy.
 3. Uploaded Static Website Files.
-4. Enabled Static Website Hosting in the S3 bucket and Deployed the Website.
+4. Enabled Static Website Hosting in the S3 bucket and Deployed the Website
 
 Please find the Screenshots as below. 
 
