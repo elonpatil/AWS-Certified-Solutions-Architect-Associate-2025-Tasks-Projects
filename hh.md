@@ -1,27 +1,26 @@
-**AWS Elastic Beanstalk**
+**AWS S3 Static Website Hosting**
 
-I explored AWS Elastic Beanstalk as part of my AWS Certified Solutions Architect Associate preparation. This hands-on exercise involved:
+In this hands-on project, I set up an S3 Static Website using AWS S3. The goal was to host a simple static website using an S3 bucket with public access and proper security policies.
 
-1. Creating an elastic BeanStalk environment
-2. Setting up an EC2 instance role to allow Beanstalk to manage resources
-3. Deploying a Node.js application on Beanstalk
+1. Created an S3 Bucket and Enabled public access for website access.
+2. Generated S3 Bucket Policy.
+3. Uploaded Static Website Files.
+4. Enabled Static Website Hosting in the S3 bucket and Deployed the Website.
 
-1.	Create the webserver environment.
-![image](https://github.com/user-attachments/assets/a5bb1dbb-d76b-4663-ab06-4ff5aaf85e06)
-![image](https://github.com/user-attachments/assets/2d585275-c4c3-47c2-8359-41f669773c29)
+Please find the Screenshots as below. 
 
-2.	Create the role for elastic beanstalk.
-![image](https://github.com/user-attachments/assets/da32aeb7-afbe-4732-90da-2871a3434043)
-![image](https://github.com/user-attachments/assets/27c85519-2854-4932-bdf7-8e4d73935465)
-![image](https://github.com/user-attachments/assets/e8eb232c-68d4-493d-8c91-366316e4d719)
-
-3.	Add the role in the environment.
-![image](https://github.com/user-attachments/assets/7e687caa-337f-4ddf-83ba-892072b1f43d)
-
-4.	The application is ready and publically available.
-![image](https://github.com/user-attachments/assets/5a8967e3-8090-4943-b6dd-b4007225cd3b)
-![image](https://github.com/user-attachments/assets/da81a7e6-e816-45e4-9ace-35427bb3874f)
-
-5.	Cloud formation template.
-![image](https://github.com/user-attachments/assets/9bb332d7-34bf-4092-8bf0-32fdaf836642)
-![image](https://github.com/user-attachments/assets/b0b26615-b63f-4677-affe-f1f6c5ce670d)
+1.	Create the S3 bucket with all public access allowed.
+![image](https://github.com/user-attachments/assets/e4cda8c5-5f86-47c7-8da1-4c2a2d95c5a1)
+![image](https://github.com/user-attachments/assets/cd42f569-75e9-4df9-a1a4-a2d80782d758)
+2. Enable the Static website hosting for the same bucket.
+![image](https://github.com/user-attachments/assets/1c541a3d-5048-4e3c-82f8-a5c3881dfdb7)
+3.	Upload the website pages.
+![image](https://github.com/user-attachments/assets/2b2cb360-cba8-4110-a612-069fd997f093)
+4.	Generate the S3 bucket policies using AWS Policy Generator. Action GetObject
+![image](https://github.com/user-attachments/assets/2ed353dc-6f2c-498f-8655-44c0633f6ce8)
+5.	Attach the policy code to the bucket.
+![image](https://github.com/user-attachments/assets/081a89d6-8e7e-4cf5-9f11-38da5816fb78)
+6.	Now we can access the website via S3 bucker web URL.
+![image](https://github.com/user-attachments/assets/371d2201-6d24-494e-926d-265215445e84)
+![image](https://github.com/user-attachments/assets/4cff0f5b-c21c-4a1a-b8ba-be2c1463c534)
+![image](https://github.com/user-attachments/assets/912ba73e-7ac5-4ffb-9518-928f3676b702)
