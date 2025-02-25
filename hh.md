@@ -1,26 +1,18 @@
-**AWS S3 Static Website Hosting**
+**S3 Cross-Region Replication**
 
-In this hands-on project, I set up an S3 Static Website using AWS S3. The goal was to host a simple static website using an S3 bucket with public access and proper security policies.
+I created two S3 buckets in different AWS regions and configured Cross-Region Replication (CRR). I set up a replication rule to automatically copy objects from the origin bucket to the destination bucket. To validate the setup, I uploaded an object to the origin bucket, which was successfully replicated to the target bucket in another region. This exercise helped me understand S3 replication, bucket policies, and IAM role permissions required for cross-region data transfer.
 
-1. Created an S3 Bucket and Enabled public access for website access.
-2. Generated S3 Bucket Policy.
-3. Uploaded Static Website Files.
-4. Enabled Static Website Hosting in the S3 bucket and Deployed the Website
-
-Please find the Screenshots as below. 
-
-1.	Create the S3 bucket with all public access allowed.
-![image](https://github.com/user-attachments/assets/e4cda8c5-5f86-47c7-8da1-4c2a2d95c5a1)
-![image](https://github.com/user-attachments/assets/cd42f569-75e9-4df9-a1a4-a2d80782d758)
-2. Enable the Static website hosting for the same bucket.
-![image](https://github.com/user-attachments/assets/1c541a3d-5048-4e3c-82f8-a5c3881dfdb7)
-3.	Upload the website pages.
-![image](https://github.com/user-attachments/assets/2b2cb360-cba8-4110-a612-069fd997f093)
-4.	Generate the S3 bucket policies using AWS Policy Generator. Action GetObject
-![image](https://github.com/user-attachments/assets/2ed353dc-6f2c-498f-8655-44c0633f6ce8)
-5.	Attach the policy code to the bucket.
-![image](https://github.com/user-attachments/assets/081a89d6-8e7e-4cf5-9f11-38da5816fb78)
-6.	Now we can access the website via S3 bucker web URL.
-![image](https://github.com/user-attachments/assets/371d2201-6d24-494e-926d-265215445e84)
-![image](https://github.com/user-attachments/assets/4cff0f5b-c21c-4a1a-b8ba-be2c1463c534)
-![image](https://github.com/user-attachments/assets/912ba73e-7ac5-4ffb-9518-928f3676b702)
+1.	Created the bucket name “mayur-bucket-origin” in “ap-south-1” and replication bucket name “mayur-bucket-replication” in Singapore “ap-southeast-1”. Enabled the versioning to them as the replication is not possible without versioning.
+![image](https://github.com/user-attachments/assets/fed81241-7630-43eb-9570-58a6968a1fc7)
+2.	On the origin bucket set the replication rule.
+![image](https://github.com/user-attachments/assets/77c457d7-3c67-4081-88cf-4d1e24da8e2d)
+![image](https://github.com/user-attachments/assets/d7ff202b-0594-4b74-ba2e-c2e1f304e654)
+![image](https://github.com/user-attachments/assets/e17363ae-9823-4ef4-a580-90be2a0d9b51)
+![image](https://github.com/user-attachments/assets/b2125194-337e-4741-80d5-9f5c3c1bc370)
+3.	I uploaded the new file to the origin to check the replication.
+![image](https://github.com/user-attachments/assets/308d1d99-cf3f-427f-b7c8-aa7e752f7bee)
+YES, it's replicated in another region as seen in below SS.
+![image](https://github.com/user-attachments/assets/6831fc8a-172b-45b7-95eb-ec5518a2acbe)
+4.	Versioning also replicated.
+![image](https://github.com/user-attachments/assets/6801339a-91cc-439a-be25-6808daeeb671)
+![image](https://github.com/user-attachments/assets/3828750c-e031-453e-8ef1-ff5eb72a143b)
