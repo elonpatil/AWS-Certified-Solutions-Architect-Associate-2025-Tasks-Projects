@@ -1,17 +1,21 @@
-**AWS CloudFront Hands-on Project**
+**AWS S3 Lifecycle Management Project**
 
-I implemented AWS CloudFront to serve content efficiently via a CDN. I created an S3 bucket to store static files, then set up a CloudFront distribution to deliver content securely. After modifying the S3 bucket's access policy, I successfully accessed the index.html file through CloudFront. This exercise enhanced my understanding of Cloudfront configurations and secure content delivery using AWS.
+In this hands-on project, I worked with Amazon S3 to create and manage storage efficiently. I provisioned S3 buckets and implemented lifecycle rules to optimize cost and data retention. The lifecycle policies included transitioning objects to different storage classes based on access patterns and automated deletion of obsolete data. This project demonstrates practical knowledge of S3 storage management and cost optimization strategies.
 
-1.	Create the bucket in S3.
-![image](https://github.com/user-attachments/assets/ec5cba16-eca2-4d99-888d-22fd97e21bf9)
-2.	Upload the code files.
-![image](https://github.com/user-attachments/assets/1741232c-6687-4dc2-9f17-7c60e81513e8)
-3.	Created the Cloudfront distribution with OAC (Origin Access Control) choosing the default root object index.html.
-![image](https://github.com/user-attachments/assets/c00db70d-5489-4f1b-a41e-d1c6810f2968)
-4.	Copy the policy code from coudfront and edit the origin bucket policy.
-![image](https://github.com/user-attachments/assets/3cb3032e-9dbc-4a0a-ad92-0030ddc1d3b4)
-![image](https://github.com/user-attachments/assets/6ae906f4-6a8e-4b21-8911-2db6df337381)
-5. We can access the the content via Cloudfront distribution name. 
-https://d2gekv6i7o5vcn.cloudfront.net
-Now if we refresh the page, the content of the index.html file will be served from the cloud front cache and not from the origin. So, 2nd time this will be accessed more quickly as its served from the nearest edge location.
-![image](https://github.com/user-attachments/assets/e4e4600d-712c-4da5-b7b0-0ce0638e8d03)
+1.	Created the bucket with versioning enabled.
+![image](https://github.com/user-attachments/assets/221627f1-cbd3-436f-916d-00868995cb5e)
+2.	Created the lifecycle rule for bucket.
+![image](https://github.com/user-attachments/assets/b19cc6f2-f4a7-4624-9987-2375633ff578)
+3.	Transition current versions of objects between storage classes.
+![image](https://github.com/user-attachments/assets/9292b593-e99d-4c76-baa3-a21c6c34b50b)
+![image](https://github.com/user-attachments/assets/78542d73-6bfe-46fb-b9a0-de0e44f3de94)
+4.	Transition noncurrent versions of objects between storage classes.
+![image](https://github.com/user-attachments/assets/9f94e4f8-0150-4f7e-9de2-0356deec8acb)
+![image](https://github.com/user-attachments/assets/d2ca891d-fa5c-4a7c-afb5-e6c7ede6cfb1)
+5.	Expire current versions of objects.
+![image](https://github.com/user-attachments/assets/ca0e94e4-3288-4990-8fea-7c823db6d12a)
+![image](https://github.com/user-attachments/assets/26af10da-db49-4ebc-99fc-0732bca1bce0)
+6.	Permanently delete noncurrent versions of objects.
+![image](https://github.com/user-attachments/assets/0de36578-f4c7-46e3-83da-d8cf5703c026)
+7.	S3 lifecycle rule is generated. According to the rules set, the objects will be moved to the different storage classes OR to be deleted.
+![image](https://github.com/user-attachments/assets/91904cbf-83ce-4e90-9371-3b0d843148ff)
