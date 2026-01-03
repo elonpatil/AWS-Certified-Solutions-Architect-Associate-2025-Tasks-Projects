@@ -1,26 +1,20 @@
-**Cross-Region S3 Buckets with CORS Configuration**
+**Fixing AWS Budget and Alerts**
 
-In this hands-on project, I created two S3 buckets to explore cross-region access. The primary bucket was deployed in the Mumbai region, while the secondary bucket, containing additional code content, was set up in the Singapore region. 
-To enable seamless access between the two buckets, I configured Cross-Origin Resource Sharing (CORS), allowing resources from the secondary bucket to be accessed by the primary bucket. 
-This setup demonstrates how CORS can facilitate cross-region data sharing within AWS S3.
+Implemented three cost-protection mechanisms in AWS: a zero-spend budget alert, free-tier/billing alerts, and a CloudWatch billing alarm. These notify me immediately if any unexpected charges occur or if usage exceeds free-tier limits. This setup ensures safe hands-on experimentation while strictly controlling costs during AWS learning and lab work.
 
-1.	Created the main S3 bucket where the main web page is uploaded. Uploaded the index.html file and required images for the index page. Given the necessary getObject access to the bucket.
-![image](https://github.com/user-attachments/assets/501e8211-f480-4211-a11d-0e82acb5d96c)
-2.	Created another bucket in a different region and uploaded the other part of the main index.html which is deployed in the Mumbai region.
-![image](https://github.com/user-attachments/assets/5b1a267a-b751-4030-b9ce-baa16adbf128)
-![image](https://github.com/user-attachments/assets/f94bd4fd-ba60-4728-be34-6e76b71a6bf7)
-3.	Updated the index.html file with the following code.
-http://demo-other-origin-mayur-8788.s3-website-ap-southeast-1.amazonaws.com/extra-page.html. 
-![image](https://github.com/user-attachments/assets/1e52b047-bd20-4e46-bed2-b84492e8d4f3)
-![image](https://github.com/user-attachments/assets/eef0f793-984b-42d3-8d04-26918fce4cbb)
-4.	While accessing the content of another bucket, we are getting the access issue. 
-![image](https://github.com/user-attachments/assets/fdc72f57-f667-4cd9-baa4-0001ab0b796c)
-5.	To resolve this, we have to set the other bucket for CORS.
-![image](https://github.com/user-attachments/assets/b1fc2738-3d75-4d3e-a6c8-61be2e840d91)
-Before core setting
-![image](https://github.com/user-attachments/assets/824bd598-4bc6-4171-9aa2-d17c5d7a18df)
-After the CORS setting
-![image](https://github.com/user-attachments/assets/26f3a9c1-26fc-4c85-b60c-18af33229081) 
-Proof: 
-![image](https://github.com/user-attachments/assets/3f4c2548-fd44-4c23-9ce6-4e4373e30950)
- 
+1.	Zero-spend AWS Budget alert
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/281b0f4f-74a3-4807-91fc-1eae9e3f06f9" />
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/5ef3660b-39da-4005-9a41-0f21e210adcc" />
+
+2.	Free Tier usage alert
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/763b50b8-63ef-41e1-99e1-3cb74f824bdd" />
+
+3.	CloudWatch billing alarm ($1 alert)
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/cfa224c8-00d0-48f7-b18b-eb7d51a21295" />
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/b2e576fe-7f28-4d83-9ca4-2be3852e0a90" />
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/0c3cf086-0e77-4907-b3f2-2d9e1bee742b" />
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/5ec0cb69-ec4b-4b6e-b05b-e98e10c88e46" />
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/49bbad42-55b3-4e06-8f75-745583874788" />
+<img width="940" height="446" alt="image" src="https://github.com/user-attachments/assets/f1143f95-741e-49bf-889a-abcbb3460ef1" />
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/0b191454-41ed-45c5-8990-90d94394a8d1" />
+
