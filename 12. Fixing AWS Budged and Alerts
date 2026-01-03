@@ -1,0 +1,13 @@
+**Fixing AWS Budget and Alerts**
+
+Implemented three cost-protection mechanisms in AWS: a zero-spend budget alert, free-tier/billing alerts, and a CloudWatch billing alarm. These notify me immediately if any unexpected charges occur or if usage exceeds free-tier limits. This setup ensures safe hands-on experimentation while strictly controlling costs during AWS learning and lab work.
+
+
+1.	Zero-spend AWS Budget alert
+![image](https://github.com/user-attachments/assets/5b67c2ce-ce91-438a-970b-d41a4dc534d6)
+2.	Free Tier usage alert
+![image](https://github.com/user-attachments/assets/913d0895-7369-456b-91c6-c4b1c4c80f9d)
+![image](https://github.com/user-attachments/assets/cda1db17-a68c-42b6-8bcf-e22398189e6d)
+![image](https://github.com/user-attachments/assets/b6ba707e-9a7c-45e4-98d1-3bbd074d9029)
+3.	CloudWatch billing alarm ($1 alert)
+![image](https://github.com/user-attachments/assets/4643b125-4894-492b-a566-a7e3cd605f21)
